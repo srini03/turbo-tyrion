@@ -1,0 +1,2 @@
+//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/CSVtoDBSqlParameterResource/src/main/resources/spring-batch-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph>\n<element clazz\="JobModelElement" type\="job">\n<structure end\="3463" endstart\="3451" start\="3180" startend\="3210"/>\n<bounds height\="118" width\="141" x\="15" y\="17"/>\n</element>\n</graph>
+eclipse.preferences.version=1

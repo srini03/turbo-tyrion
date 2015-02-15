@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<description>Example job to get you started. It provides a skeleton for a typical batch application.</description>
+ 	
+	<job id="csvToDatabaseJob" xmlns="http://www.springframework.org/schema/batch">
+        <step id="csvToDatabaseStep">
+            <tasklet>
+                <chunk 
+                    reader="itemReader"
+                    writer="itemWriter" 
+                    commit-interval="1">
+                </chunk>
+            </tasklet>
+        </step>
+    </job>
+	
+	
+	<bean id="itemReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
+        <property name="resource" value="classpath:/input/sample-data.csv"  />
+        <property name="lineMapper">
+            <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+                <property name="lineTokenizer">
+                    <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                        <property name="names" value="firstName,lastName,age" />
+                    </bean>
+                </property>
+                <property name="fieldSetMapper">
+                    <bean class="org.springframework.batch.item.file.mapping.PassThroughFieldSetMapper" />
+                </property>
+            </bean>
+        </property>
+        <property name="strict" value="true" />
+    </bean>
+    
+    <bean id="itemWriter" class="org.springframework.batch.item.database.JdbcBatchItemWriter">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sql">
+            <value>
+                <![CDATA[
+                    INSERT INTO people 
+                        (
+                            last_name,
+                            first_name,
+                            age
+                        ) 
+                    VALUES 
+                        ( 
+                            :lastName,
+                            :firstName,
+                            :age
+                        )
+                ]]>
+            </value>
+        </property>
+        <property name="itemSqlParameterSourceProvider">
+            <bean class="com.batch.test.FieldSetSqlParameterSourceProvider" />
+        </property>
+    </bean>
+
+</beans>
