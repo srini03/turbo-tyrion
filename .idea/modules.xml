@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Hello/Hello.iml" filepath="$PROJECT_DIR$/Hello/Hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" filepath="$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/build-spring-batch/build-spring-batch.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/build-spring-batch/build-spring-batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gs-batch-processing-complete/gs-batch-processing-complete.iml" filepath="$PROJECT_DIR$/gs-batch-processing-complete/gs-batch-processing-complete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gs-batch-processing-initial/gs-batch-processing-initial.iml" filepath="$PROJECT_DIR$/gs-batch-processing-initial/gs-batch-processing-initial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gs-maven-complete/gs-maven-complete.iml" filepath="$PROJECT_DIR$/gs-maven-complete/gs-maven-complete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gs-maven-initial/gs-maven-initial.iml" filepath="$PROJECT_DIR$/gs-maven-initial/gs-maven-initial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/initial/initial.iml" filepath="$PROJECT_DIR$/initial/initial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/archetypes/simple-cli/simple-cli-archetype.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/archetypes/simple-cli/simple-cli-archetype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/archetypes/spring-batch-archetype.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/archetypes/spring-batch-archetype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-core/spring-batch-core.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-core/spring-batch-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-core-tests/spring-batch-core-tests.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-core-tests/spring-batch-core-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-infrastructure/spring-batch-infrastructure.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-infrastructure/spring-batch-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-infrastructure-tests/spring-batch-infrastructure-tests.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-infrastructure-tests/spring-batch-infrastructure-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-parent/spring-batch-parent.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-parent/spring-batch-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-samples/spring-batch-samples.iml" filepath="$PROJECT_DIR$/ProSpringBatch/spring-batch/spring-batch-samples/spring-batch-samples.iml" />
+    </modules>
+  </component>
+</project>
