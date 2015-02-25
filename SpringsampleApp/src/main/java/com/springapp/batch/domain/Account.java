@@ -1,4 +1,4 @@
-package com.springapp.batch;
+package com.springapp.batch.domain;
 
 /**
  * Created by srini on 2/23/15.
@@ -13,8 +13,8 @@ public class Account {
     private String accountNumber;
     private Customer cust;
     private BigDecimal cashBalance;
-   // private PricingTier tier;
-    private BigDecimal tier;
+    private PricingTier tier;
+    //private BigDecimal tier;
     private List<Transaction> transactions;
 
     public void setId(long id) {
@@ -33,8 +33,9 @@ public class Account {
         this.cashBalance = cashBalance;
     }
 
-    //public void setTier(PricingTier tier)
-    public void setTier(BigDecimal tier) {
+    public void setTier(PricingTier tier)
+    //public void setTier(BigDecimal tier)
+    {
         this.tier = tier;
     }
 
@@ -58,8 +59,9 @@ public class Account {
         return cashBalance;
     }
 
-    //public PricingTier getTier()
-    public BigDecimal getTier() {
+    public PricingTier getTier()
+    //public BigDecimal getTier()
+    {
         return tier;
     }
 

@@ -7,9 +7,9 @@ import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
 
-import com.springapp.batch.Account;
-import com.springapp.batch.Address;
-import com.springapp.batch.Customer;
+import com.springapp.batch.domain.Account;
+import com.springapp.batch.domain.Address;
+import com.springapp.batch.domain.Customer;
 
 public class CustomerFieldSetMapper implements FieldSetMapper<Customer> {
 

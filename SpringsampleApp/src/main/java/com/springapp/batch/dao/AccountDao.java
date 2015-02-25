@@ -3,7 +3,7 @@ package com.springapp.batch.dao;
 /**
  * Created by srini on 2/24/15.
  */
-import com.springapp.batch.Account;
+import com.springapp.batch.domain.Account;
 
 public interface AccountDao
 {

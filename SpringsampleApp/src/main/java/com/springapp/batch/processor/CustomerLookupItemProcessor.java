@@ -5,17 +5,17 @@ package com.springapp.batch.processor;
  */
 
 import org.springframework.batch.item.ItemProcessor;
-import com.springapp.batch.Account;
-import com.springapp.batch.Customer;
-import com.springapp.batch.Transaction;
+import com.springapp.batch.domain.Account;
+import com.springapp.batch.domain.Customer;
+import com.springapp.batch.domain.Transaction;
 import com.springapp.batch.dao.AccountDao;
 import com.springapp.batch.dao.CustomerDao;
 import com.springapp.batch.dao.TickerDao;
-import com.springapp.batch.Ticker;
+import com.springapp.batch.domain.Ticker;
 
 
 
-import com.springapp.batch.TransactionType;
+import com.springapp.batch.domain.TransactionType;
 import com.springapp.batch.exception.InvalidItemException;
 
 public class CustomerLookupItemProcessor implements ItemProcessor<Object, Object> {

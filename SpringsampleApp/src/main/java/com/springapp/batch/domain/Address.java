@@ -1,4 +1,4 @@
-package com.springapp.batch;
+package com.springapp.batch.domain;
 
 /**
  * Created by srini on 2/23/15.

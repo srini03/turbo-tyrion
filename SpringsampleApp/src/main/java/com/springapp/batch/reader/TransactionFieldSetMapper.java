@@ -7,7 +7,7 @@ import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
 
-import com.springapp.batch.Transaction;
+import com.springapp.batch.domain.Transaction;
 
 public class TransactionFieldSetMapper implements FieldSetMapper<Transaction> {
 

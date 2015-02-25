@@ -12,8 +12,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.springapp.batch.dao.TickerDao;
-import com.springapp.batch.Ticker;
-import com.springapp.batch.dao.Transaction;
+import com.springapp.batch.domain.Ticker;
+import com.springapp.batch.domain.Transaction;
 
 public class TickerDaoJdbc extends JdbcTemplate implements TickerDao {
 

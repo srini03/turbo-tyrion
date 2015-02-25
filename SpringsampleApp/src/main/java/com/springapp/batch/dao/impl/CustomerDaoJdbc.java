@@ -8,14 +8,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.springapp.batch.Address;
-import com.springapp.batch.Customer;
+import com.springapp.batch.domain.Address;
+import com.springapp.batch.domain.Customer;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.springapp.batch.dao.CustomerDao;
-//import com.springapp.batch.Address;
-//import com.springapp.batch.Customer;
+//import com.springapp.batch.domain.Address;
+//import com.springapp.batch.domain.Customer;
 
 public class CustomerDaoJdbc extends JdbcTemplate implements CustomerDao {
 

@@ -12,12 +12,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.springapp.batch.dao.AccountDao;
-import com.springapp.batch.Account;
-import com.springapp.batch.Address;
-import com.springapp.batch.Customer;
-import com.springapp.batch.PricingTier;
-import com.springapp.batch.Transaction;
-import com.springapp.batch.TransactionType;
+import com.springapp.batch.domain.Account;
+import com.springapp.batch.domain.Address;
+import com.springapp.batch.domain.Customer;
+import com.springapp.batch.domain.PricingTier;
+import com.springapp.batch.domain.Transaction;
+import com.springapp.batch.domain.TransactionType;
 
 public class AccountDaoJdbc extends JdbcTemplate implements AccountDao {
 

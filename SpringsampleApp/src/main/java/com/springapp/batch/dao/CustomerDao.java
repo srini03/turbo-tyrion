@@ -5,7 +5,7 @@ package com.springapp.batch.dao;
  */
 
 
-import com.springapp.batch.Customer;
+import com.springapp.batch.domain.Customer;
 
 public interface CustomerDao
 {
