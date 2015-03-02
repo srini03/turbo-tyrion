@@ -21,12 +21,8 @@ import com.springapp.batch.domain.TransactionType;
 
 public class AccountDaoJdbc extends JdbcTemplate implements AccountDao {
 
-    private static final String FIND_BY_ACCOUNT_NUMBER = "select a.id, " +
-            "a.accountNumber, a.cashBalance, a.tier, a.customer_id, c.firstName, " +
-            "c.lastName, c.ssn, c.address1, c.city, c.state, c.zip, t.id as transaction_id, " +
-            "t.transactionType, t.executedTime, t.dollarAmount, t.qty, t.tickerId, t.fee  " +
-            "from account a inner join customer c on a.customer_id = c.id left outer join " +
-            "transaction t on a.id = t.account_id where accountNumber = ?";
+    private static final String FIND_BY_ACCOUNT_NUMBER = "select a.id, a.accountNumber, a.cashBalance, a.tier, a.customer_id, c.firstName, c.lastName, c.ssn, c.address1, c.city, c.state, c.zip, t.id as transaction_id, t.transactionType, t.executedTime, t.dollarAmount, t.qty, t.tickerId from account a inner join customer c on a.customer_id = c.id left outer join transaction t on a.id = t.account_id where accountNumber = ?";;
+
 
     private final class AccountRowMapper implements RowMapper {
         public Object mapRow(ResultSet rs, int arg1)

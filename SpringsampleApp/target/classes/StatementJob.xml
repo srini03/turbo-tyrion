@@ -4,14 +4,14 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xmlns:util="http://www.springframework.org/schema/beans"
              xsi:schemaLocation="http://www.springframework.org/schema/batch
-                                 http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+                                 http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
                                  http://www.springframework.org/schema/beans
                                  http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
     <beans:import resource="launch-context.xml"/>
 
 
     <beans:bean id="customerTransactionFile" class="org.springframework.core.io.FileSystemResource">
-        <beans:constructor-arg value="/input/customerTransaction.csv"/>
+        <beans:constructor-arg value="input/customertransaction.csv"/>
     </beans:bean>
 
     <beans:bean id="customerLineTokenizer"

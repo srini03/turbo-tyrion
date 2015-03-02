@@ -19,7 +19,7 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("StatementJob.xml");
 
         JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-        Job job = (Job) context.getBean("statementJob");
+        Job job = (Job) context.getBean("StatementJob");
 
         try {
             JobExecution execution = jobLauncher.run(job, new JobParameters());

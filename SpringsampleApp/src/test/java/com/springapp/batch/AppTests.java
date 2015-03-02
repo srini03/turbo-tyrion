@@ -13,13 +13,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:launch-context.xml")
+@ContextConfiguration("classpath:StatementJob.xml")
 public class AppTests {
     @Autowired
     private JobLauncher jobLauncher;
 
     @Autowired
-    @Qualifier("sampleJob")
+    @Qualifier("StatementJob")
     private Job job;
 
     @Test
