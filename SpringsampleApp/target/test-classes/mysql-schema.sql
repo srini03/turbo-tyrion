@@ -52,4 +52,5 @@ CREATE  TABLE Transaction (
   dollarAmount DECIMAL(15,2) NOT NULL ,
   qty INT NULL ,
   tickerId INT NOT NULL ,
+  fee VARCHAR(45) NULL ,
   Account_id INT NOT NULL);

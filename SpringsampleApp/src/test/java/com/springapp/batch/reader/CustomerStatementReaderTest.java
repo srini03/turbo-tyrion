@@ -1,8 +1,4 @@
-package com.springapp.batch;
-
-/**
- * Created by srini on 2/26/15.
- */
+package com.springapp.batch.reader;
 
 
 import static org.junit.Assert.assertEquals;
@@ -20,6 +16,7 @@ import org.springframework.batch.item.ItemReader;
 
 import com.springapp.batch.dao.TickerDao;
 import com.springapp.batch.domain.Customer;
+import com.springapp.batch.domain.Statement;
 import com.springapp.batch.domain.Transaction;
 
 public class CustomerStatementReaderTest {
@@ -63,7 +60,7 @@ public class CustomerStatementReaderTest {
         Statement result = reader.read();
 
         assertEquals(customer, result.getCustomer());
-        assertEquals(500.00, result.getSecurityTotal().doubleValue(), 0);
+        assertEquals(501.00, result.getSecurityTotal().doubleValue(), 0);
         assertEquals(1, result.getStocks().size());
     }
 }

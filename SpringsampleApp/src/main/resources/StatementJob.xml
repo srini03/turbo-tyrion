@@ -244,10 +244,7 @@ tickerId, account_id) values (:type.intValue, :tradeTimestamp, :dollarAmount, :q
         </tasklet>
     </step>
 
-    <beans:bean id="feesItemProcessor"
-
-                class="com.springapp.batch.processor.FeesItemProcessor"/>
-
+    <beans:bean id="feesItemProcessor" class="com.springapp.batch.processor.FeesItemProcessor"/>
 
     <beans:bean id="feesUpdateWriter"
                 class="org.springframework.batch.item.database.JdbcBatchItemWriter">
@@ -286,7 +283,6 @@ tickerId, account_id) values (:type.intValue, :tradeTimestamp, :dollarAmount, :q
     <beans:bean id="customerReader"
                 class="org.springframework.batch.item.database.JdbcCursorItemReader">
 
-        Code View: Scroll / Show All
         <beans:property name="dataSource" ref="dataSource"/>
         <beans:property name="sql"
                         value="select a.id as account_id, a.accountNumber, a.cashBalance, a.tier, c.address1 as address, c.city, c.state, c.zip, c.id as customer_id, c.firstName, c.lastName from customer c left outer join account a on a.customer_id = c.id order by c.id"/>
@@ -301,17 +297,6 @@ tickerId, account_id) values (:type.intValue, :tradeTimestamp, :dollarAmount, :q
         <beans:property name="customerReader" ref="customerReader"/>
         <beans:property name="tickerDao" ref="tickerDao"/>
     </beans:bean>
-
-    <step id="generateMonthlyStatements">
-        <tasklet>
-            <chunk reader="customerStatementReader" writer="statementsWriter"
-                   commit-interval="1">
-                <streams>
-                    <stream ref="customerReader"/>
-                </streams>
-            </chunk>
-        </tasklet>
-    </step>
 
     <beans:bean id="statementFiles"
                 class="org.springframework.core.io.FileSystemResource">
@@ -340,6 +325,17 @@ tickerId, account_id) values (:type.intValue, :tradeTimestamp, :dollarAmount, :q
         <beans:property name="delegate" ref="statementWriter"/>
     </beans:bean>
 
+    <step id="generateMonthlyStatements">
+        <tasklet>
+            <chunk reader="customerStatementReader" writer="statementsWriter"
+                   commit-interval="1">
+                <streams>
+                    <stream ref="customerReader"/>
+                </streams>
+            </chunk>
+        </tasklet>
+    </step>
+
     <job id="statementJob" incrementer="idIncrementer">
         <step id="step1" parent="importCustomerAndTransactionData" next="step2"/>
         <step id="step2" parent="retrieveStockPrices" next="step3"/>
@@ -348,7 +344,5 @@ tickerId, account_id) values (:type.intValue, :tradeTimestamp, :dollarAmount, :q
         <step id="step5" parent="calculateTransactionFees" next="step6"/>
         <step id="step6" parent="generateMonthlyStatements"/>
     </job>
-
-
 
 </beans:beans>
